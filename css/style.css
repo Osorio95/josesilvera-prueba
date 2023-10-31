@@ -1,97 +1,247 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+* {
+  transition: all 250ms ease-in-out;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
+.mySlides {
+  position: relative;
+  display: none;
+  object-fit: cover;
+  width: 260px;
+  height: 260px;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  object-fit: cover;
+  text-align: center;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+header nav>a:hover,
+footer a:hover {
+  color: #ffc107 !important;
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.thumbnail {
+  cursor: pointer;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #e2e2e2;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #007bff;
+  z-index: 5;
+}
+
+
+.form {
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.team-container {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  background-color: white;
+  overflow: hidden;
+  border-radius: 8px;
+  background-size: cover;
+}
+
+.team-banner {
+  background-image: url("/imagenes/IMAGE BACKGROUND CARD TEAM  (3).jpg");
+  width: 240px;
+  height: 100px;
+  background-size: cover;
+  z-index: 0;
+  filter: brightness(0.6);
+}
+
+.team-pic {
+  border-radius: 99%;
+  height: 84px;
+  margin-top: -37px;
+  z-index: 1;
+  border: 6px solid white;
+}
+
+.career-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 12px;
+  background-size: cover;
+}
+
+.carrer-h-card {
+  height: 220px;
+}
+
+.career-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding-left: 24px;
+  pointer-events: none;
+}
+
+.career-container button {
+  pointer-events: all;
+}
+
+.filter-img {
+  width: 100%;
+  background-size: cover;
+  filter: brightness(0.4);
+}
+
+.img-zoom:hover {
+  scale: 150%;
+  transition: all 250ms ease-in-out;
+}
+
+header {
+  z-index: 10;
+  transition: all 300ms ease-in-out;
+}
+
+#outro>div>div.bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-image: url("/imagenes/IMAGEN HERO.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: brightness(0.4);
+}
+
+video.hidden {
+  object-fit: cover;
+  position: absolute;
+  z-index: -1;
+}
+
+video.show {
+  object-fit: cover;
+  position: absolute;
+  z-index: 1;
+}
+
+video {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.offer-container {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  padding-bottom: 16px;
+  border-radius: 16px;
+  overflow: hidden;
+  width: 240px;
+  margin: 12px auto;
+  background-color: white;
+  filter: drop-shadow(4px 4px 4px #9999);
+}
+
+.offer-container>h5 {
+  padding: 12px;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
+.offer-container>button {
+  border-radius: 18px;
+  padding: 4px 8px;
+  width: fit-content;
 }
 
-.card {
-  padding: 2em;
+.newTag {
+  position: absolute;
+  left: 6px;
+  bottom: 0px;
+  background-color: white;
+  padding: 2px 12px;
+  border-radius: 12px;
 }
 
-.read-the-docs {
-  color: #888;
+.offer-thumbnail {
+  max-width: 240px;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+#benefits>img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.benefit-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-container {
+  background-color: white;
+  padding: 36px;
+  border-radius: 99%;
+  width: fit-content;
+}
+
+.icon-container>img {
+  width: 128px;
+}
+
+@media (max-width: 600px) {
+  #benefits {
+    background-color: #007bff;
   }
-  a:hover {
-    color: #747bff;
+
+  #hero video {
+    height: 100vh;
   }
-  button {
-    background-color: #f9f9f9;
+
+  .team-container {
+    margin: 24px auto;
+  }
+
+  .carrer-h-card {
+    height: 136px;
+    margin: 16px auto;
+  }
+
+  .benefit-container {
+    padding: 0px;
+  }
+
+  .icon-container {
+    padding: 18px;
+  }
+
+  .icon-container>img {
+    width: 48px;
   }
 }
