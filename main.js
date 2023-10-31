@@ -157,7 +157,7 @@ const carousel = () => {
 		slideIndex = 1
 	}
 
-	for (n = 0; n < dots.length; n++) {
+	for (let n = 0; n < dots.length; n++) {
 		dots[n].classList.remove("active");
 	}
 
