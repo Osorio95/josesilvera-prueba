@@ -216,6 +216,10 @@ video {
 }
 
 @media (max-width: 600px) {
+  #benefits {
+    background-color: #007bff;
+  }
+
   #hero video {
     height: 100vh;
   }
