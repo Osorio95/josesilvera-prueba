@@ -1,3 +1,48 @@
+* {
+  transition: all 250ms ease-in-out;
+}
+
+.mySlides {
+  position: relative;
+  display: none;
+  object-fit: cover;
+  width: 260px;
+  height: 260px;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  object-fit: cover;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header nav>a:hover,
+footer a:hover {
+  color: #ffc107 !important;
+}
+
+.thumbnail {
+  cursor: pointer;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #e2e2e2;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #007bff;
+  z-index: 5;
+}
+
+
 .form {
   position: absolute;
   right: 0;
@@ -5,9 +50,106 @@
   z-index: 0;
 }
 
+.team-container {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  background-color: white;
+  overflow: hidden;
+  border-radius: 8px;
+  background-size: cover;
+}
+
+.team-banner {
+  background-image: url("/imagenes/IMAGE BACKGROUND CARD TEAM  (3).jpg");
+  width: 240px;
+  height: 100px;
+  background-size: cover;
+  z-index: 0;
+  filter: brightness(0.6);
+}
+
+.team-pic {
+  border-radius: 99%;
+  height: 84px;
+  margin-top: -37px;
+  z-index: 1;
+  border: 6px solid white;
+}
+
+.career-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 12px;
+  background-size: cover;
+}
+
+.carrer-h-card {
+  height: 220px;
+}
+
+.career-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding-left: 24px;
+  pointer-events: none;
+}
+
+.career-container button {
+  pointer-events: all;
+}
+
+.filter-img {
+  width: 100%;
+  background-size: cover;
+  filter: brightness(0.4);
+}
+
+.img-zoom:hover {
+  scale: 150%;
+  transition: all 250ms ease-in-out;
+}
+
 header {
   z-index: 10;
   transition: all 300ms ease-in-out;
+}
+
+#outro>div>div.bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-image: url("/imagenes/IMAGEN HERO.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: brightness(0.4);
+}
+
+video.hidden {
+  object-fit: cover;
+  position: absolute;
+  z-index: -1;
+}
+
+video.show {
+  object-fit: cover;
+  position: absolute;
+  z-index: 1;
+}
+
+video {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 
 .offer-container {
@@ -19,6 +161,7 @@ header {
   border-radius: 16px;
   overflow: hidden;
   width: 240px;
+  margin: 12px auto;
   background-color: white;
   filter: drop-shadow(4px 4px 4px #9999);
 }
@@ -47,6 +190,13 @@ header {
   max-width: 240px;
 }
 
+#benefits>img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
 .benefit-container {
   display: flex;
   flex-direction: column;
@@ -61,6 +211,33 @@ header {
   width: fit-content;
 }
 
-.icon-container > img {
+.icon-container>img {
   width: 128px;
+}
+
+@media (max-width: 600px) {
+  #hero video {
+    height: 100vh;
+  }
+
+  .team-container {
+    margin: 24px auto;
+  }
+
+  .carrer-h-card {
+    height: 136px;
+    margin: 16px auto;
+  }
+
+  .benefit-container {
+    padding: 0px;
+  }
+
+  .icon-container {
+    padding: 18px;
+  }
+
+  .icon-container>img {
+    width: 48px;
+  }
 }
